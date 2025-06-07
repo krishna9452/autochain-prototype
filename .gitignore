@@ -1,24 +1,60 @@
-# Rust
-/target/
-
-# Python
+# Python virtual environments
 venv/
+agent/venv/
+
+# Python cache and logs
 __pycache__/
-*.pyc
-
-# Node.js
-/frontend/node_modules/
-
-# ZK Files
-*.r1cs
-*.zkey
-*.wasm
-
-# Solana test validators
-/test-ledger/
-/agent/test-ledger/
-/programs/autochain/test-ledger/
-
-# Misc
-.DS_Store
+*.py[cod]
 *.log
+
+# Solana test ledger files
+test-ledger/
+agent/test-ledger/
+programs/autochain/test-ledger/
+
+# Build artifacts
+target/
+**/target/
+**/build/
+*.so
+*.dSYM/
+
+# Node modules
+frontend/node_modules/
+
+# Node-related logs and caches
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.eslintcache
+
+# Environment files
+*.env
+*.env.local
+
+# Anchor build and deployment files
+Anchor.toml
+Cargo.lock
+
+# Output of circom compilation
+circuits/*.sym
+
+# Backup or system files
+*~ 
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Zone.Identifier (Windows metadata)
+*.Zone.Identifier
+
+# IDL and deploy artifacts
+target/deploy/
+target/idl/
+target/types/
+
+# Optional: ignore compiled circuit files if not needed
+circuits/*.r1cs
+circuits/*.wasm
