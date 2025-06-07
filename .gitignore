@@ -1,66 +1,64 @@
-# Python virtual environments
-venv/
-agent/venv/
-
-# Python cache and logs
-__pycache__/
-*.py[cod]
-*.log
-
-# Solana test ledger files
-test-ledger/
-agent/test-ledger/
-programs/autochain/test-ledger/
-
-# Build artifacts
-target/
-**/target/
-**/build/
-*.so
-*.dSYM/
-
-# Node modules
-frontend/node_modules/
-
-# Node-related logs and caches
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-frontend/.eslintcache
-
-# Environment files
-*.env
-*.env.local
-
-# Anchor build and deployment files
-Anchor.toml
-Cargo.lock
-
-# Output of circom compilation
-circuits/*.sym
-
-# Backup or system files
-*~ 
-*.swp
-*.bak
+# === OS Generated Files ===
 .DS_Store
 Thumbs.db
-ehthumbs.db
 
-# Zone.Identifier (Windows metadata)
-*.Zone.Identifier
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.egg
+*.env
+.env
+.venv/
+venv/
+pip-log.txt
 
-# IDL and deploy artifacts
-target/deploy/
-target/idl/
-target/types/
+# === Node.js (if used) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
 
-#  ignore compiled circuit files if not needed
-circuits/*.r1cs
-circuits/*.wasm
-# Ignore large logs and RocksDB files
+# === IDEs ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Logs ===
+*.log
+*.out
+
+# === Database & Ledger Files ===
+*.sst
+*.ldb
+*.ldb.lock
+
+# === Project-Specific Large Directories ===
 test-ledger/
 agent/test-ledger/
 programs/autochain/test-ledger/
-*.log
-*.sst
+
+# === Build Artifacts ===
+dist/
+build/
+*.so
+*.dll
+*.exe
+
+# === Mac/Linux temporary ===
+*.swp
+*~
+.cache/
+
+# === Git ===
+.git/
+.gitignore
+
+# === Misc ===
+coverage/
+htmlcov/
