@@ -1,0 +1,13 @@
+[package]
+name = "autochain"
+version = "0.1.0"
+description = "AutoChain: Autonomous IoT on Solana"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"

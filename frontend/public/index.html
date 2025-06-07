@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutobotChain IoT Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="blockchain-animation"></div>
+    
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-link"></i> AutobotChain IoT Sensor Dashboard</h1>
+                <p>Real-time monitoring with blockchain-verified data on Solana</p>
+            </div>
+            <div class="wallet-info">
+                <div class="wallet-address">Wallet: 43jRhrXq8GHNANr916y8p621VT9BdNeTWNrGasN3GAvY</div>
+                <div class="solana-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj48cGF0aCBmaWxsPSIjMDBGQUZGIiBkPSJNNjQgMTQ0aDQ4bDQ4LTQ4aC00OGwtNDggNDhaIi8+PHBhdGggZmlsbD0iIzAwRkFGRiIgZD0iTTk2IDk2aDQ4bDQ4LTQ4aC00OGwtNDggNDhaIi8+PHBhdGggZmlsbD0iIzE0NjVFQSIgZD0iTTk2IDE5Mmg0OGw0OC00OGgtNDhsLTQ4IDQ4WiIvPjxwYXRoIGZpbGw9IiMxNDY1RUEiIGQ9Ik05NiA0OGg0OGw0OC00OEgxNDRMOTYgNDhaIi8+PC9zdmc+" alt="Solana">
+                </div>
+            </div>
+        </header>
+        
+        <div class="dashboard">
+            <div class="dashboard-row">
+                <div class="card nft-display">
+                    <h2 class="card-title"><i class="fas fa-cube"></i> Dynamic NFT Visualization</h2>
+                    <div class="nft-container">
+                        <div class="nft-card">
+                            <div class="nft-front">
+                                <div class="nft-image" id="nft-icon"></div>
+                                <div class="temperature-display" id="temperature-display">72°F</div>
+                                <div class="location" id="location-display">Warehouse A</div>
+                            </div>
+                            <div class="nft-back">
+                                <div class="nft-image">
+                                    <div class="qr-code"></div>
+                                </div>
+                                <h3>Sensor Details</h3>
+                                <div class="sensor-details">
+                                    <p><i class="fas fa-temperature-high"></i> Temperature: <span id="detail-temp">72°F</span></p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Location: <span id="detail-location">Warehouse A</span></p>
+                                    <p><i class="fas fa-building"></i> Facility: Cold Storage Unit 3</p>
+                                    <p><i class="fas fa-satellite"></i> Status: <span id="detail-status" class="moderate">Normal</span></p>
+                                    <p><i class="fas fa-history"></i> Last Update: <span id="detail-time">Just now</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status">
+                        <span class="status-dot cold-bg"></span> Cold (≤60°F)
+                        <span class="status-dot moderate-bg"></span> Moderate (61-79°F)
+                        <span class="status-dot hot-bg"></span> Hot (≥80°F)
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title"><i class="fas fa-microchip"></i> Real-time Sensor Data</h2>
+                    <div class="sensor-data">
+                        <div class="data-item">
+                            <i class="fas fa-thermometer-three-quarters"></i>
+                            <div class="data-label">Current Temperature</div>
+                            <div class="data-value moderate" id="current-temp">72°F</div>
+                        </div>
+                        
+                        <div class="data-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div class="data-label">Location</div>
+                            <div class="data-value" id="current-location">Warehouse-A</div>
+                        </div>
+                        
+                        <div class="data-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="data-label">Last Update</div>
+                            <div class="data-value" id="current-time">Just now</div>
+                        </div>
+                        
+                        <div class="data-item">
+                            <i class="fas fa-building-shield"></i>
+                            <div class="data-label">Facility Status</div>
+                            <div class="data-value moderate" id="facility-status">Normal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-row">
+                <div class="card">
+                    <h2 class="card-title"><i class="fas fa-chart-line"></i> Temperature History</h2>
+                    <div class="chart-container">
+                        <canvas id="temp-chart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title"><i class="fas fa-link"></i> Blockchain Transactions</h2>
+                    <div class="transactions-container">
+                        <div class="transactions-header">
+                            <div>Time</div>
+                            <div>Location</div>
+                            <div>Temp</div>
+                            <div>Status</div>
+                            <div>Action</div>
+                        </div>
+                        <div class="transactions-list" id="transactions-list">
+                            <!-- Transactions will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="last-updated">
+            <div class="pulse-dot"></div>
+            <p>Last Updated: <span id="update-time">Just now</span></p>
+            <div class="blockchain-info">
+                <i class="fab fa-solana"></i>
+                <span>Solana Devnet</span>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Autochain IoT Monitoring System | Secured with Solana Blockchain | Data Updates Every 5 Seconds</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

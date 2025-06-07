@@ -1,0 +1,8 @@
+{
+  "server": {
+    "baseDir": ["./public", "./src"]
+  },
+  "port": 3000,
+  "open": false,
+  "notify": false
+}

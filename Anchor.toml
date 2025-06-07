@@ -1,0 +1,15 @@
+[programs.localnet]
+autochain = "AhJJ7GNZSZGadDEirEx2j1HtjXav6nYezkFDPaE4SVti"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "scripts/test.js"
+
+[toolchain]
+        anchor_version = "0.29.0"
+
+        [registry]
+url = "https://anchor.projectserum.com"

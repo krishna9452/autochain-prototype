@@ -1,0 +1,25 @@
+# Rust
+/target/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node.js
+/frontend/node_modules/
+frontend/.next/
+
+# Circom compiled files
+*.r1cs
+*.zkey
+*.wasm
+
+# Solana test validators
+/test-ledger/
+/agent/test-ledger/
+/programs/autochain/test-ledger/
+
+# Misc
+.DS_Store
+*.log
