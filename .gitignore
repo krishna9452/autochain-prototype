@@ -55,6 +55,12 @@ target/deploy/
 target/idl/
 target/types/
 
-# Optional: ignore compiled circuit files if not needed
+#  ignore compiled circuit files if not needed
 circuits/*.r1cs
 circuits/*.wasm
+# Ignore large logs and RocksDB files
+test-ledger/
+agent/test-ledger/
+programs/autochain/test-ledger/
+*.log
+*.sst
