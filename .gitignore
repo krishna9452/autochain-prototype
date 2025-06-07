@@ -8,9 +8,8 @@ __pycache__/
 
 # Node.js
 /frontend/node_modules/
-frontend/.next/
 
-# Circom compiled files
+# ZK Files
 *.r1cs
 *.zkey
 *.wasm
