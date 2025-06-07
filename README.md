@@ -1,4 +1,4 @@
-# autobotChain-prototype
+# AutobotChain-prototype
 # 🌡️ AutobotChain IoT Monitoring System
 
 AutoChain is a **decentralized IoT monitoring platform** that combines the power of **Solana blockchain**, **zero-knowledge proofs (zk-SNARKs)** using **Circom**, and a real-time **web dashboard** built with React. The system enables privacy-preserving and tamper-proof recording of environmental sensor data, with a focus on **temperature monitoring**.
