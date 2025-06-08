@@ -93,56 +93,7 @@ AutoChain/
 ├── programs/ # Solana smart contracts in Rust
 └── test-ledger/ # Local Solana validator setup for integration testing
 
-🚀 AutobotChain Prototype - Developer Setup Guide
-🛠 Prerequisites
-Ensure the following are installed:
 
-1. Python 3.9+
-
-2. pip
-
-3. virtualenv
-
-4. Node.js & npm (if your program includes a frontend)
-
-5. Rust & Solana CLI
-curl -sSf https://sh.rustup.rs | sh
-sh -c "$(curl -sSfL https://release.solana.com/v1.18.4/install)"
-
-Anchor (for Solana smart contract development)
-
-cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
-
-📦 Step 1: Clone the Repo
-git clone https://github.com/yourusername/autochain-prototype.git
-cd autochain-prototype
-
-🐍 Step 2: Set Up Python Environment
-python3 -m venv venv
-source venv/bin/activate
-
-If requirements.txt exists, install dependencies:
-pip install -r requirements.txt
-
-🧱 Step 3: Start the Solana Test Validator
-solana-test-validator --ledger test-ledger
-
-🧾 Step 4: Deploy the Solana Smart Contract
-cd program
-anchor build
-anchor deploy
-
-Copy the generated program ID and ensure it’s referenced correctly in iot_agent.py.
-
-🤖 Step 5: Run the IoT Agent Server
-In a new terminal:
-cd agent
-source ../venv/bin/activate
-python iot_agent.py
-
-🌐 API Access
-The FastAPI server will start on:
-http://127.0.0.1:8000
 
 
 
