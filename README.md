@@ -96,4 +96,10 @@ AutoChain/
 
 
 
+<img width="1366" height="689" alt="snap6" src="https://github.com/user-attachments/assets/a2422ad4-18b3-43e0-b94f-3c4199361adf" />
+<img width="1366" height="646" alt="snap5" src="https://github.com/user-attachments/assets/f6dc179e-2710-4c38-a7a0-890a415f6ecb" />
+<img width="1366" height="648" alt="snap4" src="https://github.com/user-attachments/assets/36c25298-af8c-40d8-b5e2-6a87c27f0f91" />
+<img width="1366" height="642" alt="snap3" src="https://github.com/user-attachments/assets/fdddc854-95fd-4d0f-bb60-675d9c4feb6e" />
+<img width="1365" height="648" alt="snap2" src="https://github.com/user-attachments/assets/a926f1d5-d37b-43b9-9a0b-1c3f03cf707b" />
+<img width="1365" height="682" alt="snap1" src="https://github.com/user-attachments/assets/89f6e469-f4cc-4970-a041-12a0d4610456" />
 
